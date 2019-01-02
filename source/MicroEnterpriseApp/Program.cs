@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+﻿// -----------------------------------------------------------------------
+// <copyright file="Program.cs" company="Corey Baron">
+// Copyright (c) Corey Baron. All Rights Reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// </copyright>
+// -----------------------------------------------------------------------
 
 namespace MicroEnterpriseApp
 {
-    public class Program
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Hosting;
+
+    public static class Program
     {
         public static void Main(string[] args)
         {
