@@ -1,4 +1,9 @@
-using System;
+﻿// -----------------------------------------------------------------------
+// <copyright file="ErrorViewModel.cs" company="Corey Baron">
+// Copyright (c) Corey Baron. All Rights Reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// </copyright>
+// -----------------------------------------------------------------------
 
 namespace MicroEnterpriseApp.Models
 {
@@ -6,6 +11,6 @@ namespace MicroEnterpriseApp.Models
     {
         public string RequestId { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public bool ShowRequestId => !string.IsNullOrEmpty(this.RequestId);
     }
 }
