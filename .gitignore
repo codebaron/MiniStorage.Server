@@ -1,3 +1,4 @@
 .vs/
 bin/
 obj/
+/source/Domain.RentalInventory/Domain.RentalInventory.WebApi/.xml
