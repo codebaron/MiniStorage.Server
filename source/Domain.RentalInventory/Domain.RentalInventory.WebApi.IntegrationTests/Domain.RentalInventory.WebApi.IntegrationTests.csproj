@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.6.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
@@ -24,6 +25,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
     <CodeAnalysisRuleSet>..\..\stylecop.analyzers.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>C:\src\MicroserviceSandbox\source\Domain.RentalInventory\Domain.RentalInventory.WebApi.IntegrationTests\Domain.RentalInventory.WebApi.IntegrationTests.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Domain.RentalInventory.Test.Common\Domain.RentalInventory.Test.Common.csproj" />
     <ProjectReference Include="..\Domain.RentalInventory.WebApi\Domain.RentalInventory.WebApi.csproj" />
   </ItemGroup>
 

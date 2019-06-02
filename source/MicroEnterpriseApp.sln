@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.RentalInventory.WebA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.RentalInventory.WebApi.IntegrationTests", "Domain.RentalInventory\Domain.RentalInventory.WebApi.IntegrationTests\Domain.RentalInventory.WebApi.IntegrationTests.csproj", "{87BAF1B1-64D0-4E98-A2CE-58C67A17F920}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RentalInventory.Test.Common", "Domain.RentalInventory\Domain.RentalInventory.Test.Common\Domain.RentalInventory.Test.Common.csproj", "{C4A8BF5F-ECBA-4A88-A16F-75C4D5B95470}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{87BAF1B1-64D0-4E98-A2CE-58C67A17F920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87BAF1B1-64D0-4E98-A2CE-58C67A17F920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87BAF1B1-64D0-4E98-A2CE-58C67A17F920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A8BF5F-ECBA-4A88-A16F-75C4D5B95470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A8BF5F-ECBA-4A88-A16F-75C4D5B95470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A8BF5F-ECBA-4A88-A16F-75C4D5B95470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A8BF5F-ECBA-4A88-A16F-75C4D5B95470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{8642B632-54E3-436B-B2D7-DB954E7965EB} = {C7124807-7F91-40C9-A899-352CF4752043}
 		{561C2E4A-4520-4694-93A1-80F634807498} = {C7124807-7F91-40C9-A899-352CF4752043}
 		{87BAF1B1-64D0-4E98-A2CE-58C67A17F920} = {C7124807-7F91-40C9-A899-352CF4752043}
+		{C4A8BF5F-ECBA-4A88-A16F-75C4D5B95470} = {C7124807-7F91-40C9-A899-352CF4752043}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FCA32F63-5A74-4DF4-8156-04B22DC4D5B8}

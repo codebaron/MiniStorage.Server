@@ -2,3 +2,6 @@
 bin/
 obj/
 /source/Domain.RentalInventory/Domain.RentalInventory.WebApi/.xml
+/source/Domain.RentalInventory/Domain.RentalInventory/Domain.RentalInventory.xml
+/source/Domain.RentalInventory/Domain.RentalInventory.Test.Common/Domain.RentalInventory.Test.Common.xml
+/source/Domain.RentalInventory/Domain.RentalInventory.WebApi.IntegrationTests/Domain.RentalInventory.WebApi.IntegrationTests.xml

@@ -35,4 +35,8 @@
     <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.RentalInventory\Domain.RentalInventory.csproj" />
+  </ItemGroup>
+
 </Project>
