@@ -5,6 +5,7 @@
 
 namespace Domain.RentalInventory.WebApi
 {
+    using Autofac;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -12,9 +13,15 @@ namespace Domain.RentalInventory.WebApi
 
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            this.Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+
+            this.Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -23,6 +30,11 @@ namespace Domain.RentalInventory.WebApi
         public static void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+        }
+
+        public static void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new RetailInventoryWebApiRegistrar());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

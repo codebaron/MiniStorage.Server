@@ -5,6 +5,7 @@
 
 namespace Domain.RentalInventory.WebApi
 {
+    using Autofac.Extensions.DependencyInjection;
     using Microsoft.AspNetCore;
     using Microsoft.AspNetCore.Hosting;
 
@@ -17,6 +18,7 @@ namespace Domain.RentalInventory.WebApi
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureServices(services => services.AddAutofac())
                 .UseStartup<Startup>()
                 .Build();
     }

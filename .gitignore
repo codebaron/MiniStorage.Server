@@ -5,3 +5,4 @@ obj/
 /source/Domain.RentalInventory/Domain.RentalInventory/Domain.RentalInventory.xml
 /source/Domain.RentalInventory/Domain.RentalInventory.Test.Common/Domain.RentalInventory.Test.Common.xml
 /source/Domain.RentalInventory/Domain.RentalInventory.WebApi.IntegrationTests/Domain.RentalInventory.WebApi.IntegrationTests.xml
+/source/Domain.RentalInventory/Domain.RentalInventory.UnitTests/Domain.RentalInventory.UnitTests.xml

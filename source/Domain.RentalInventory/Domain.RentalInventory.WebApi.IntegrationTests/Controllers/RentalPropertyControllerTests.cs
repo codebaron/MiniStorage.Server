@@ -9,19 +9,20 @@ namespace Domain.RentalInventory.WebApi.IntegrationTests.Controllers
     using Domain.RentalInventory.Test.Common.TestData.ObjectMothers;
     using Domain.RentalInventory.WebApi.Controllers;
     using FluentAssertions;
+    using MediatR;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class RentalPropertyControllerTests
+    public class RentalPropertyControllerTests : ControllerTestsBase
     {
         [TestMethod]
         public async Task RentalPropertyControllerShouldGetPropertyById()
         {
-            //// arrange
+            // arrange
+            var controller = new RentalPropertyController(this.Resolve<IMediator>());
 
             // act
-            ////var result = await RentalPropertyController.Get(RentalPropertyObjectMother.BuildingA.Id).ConfigureAwait(false);
-            var result = await RentalPropertyController.Get().ConfigureAwait(false);
+            var result = await controller.Get(RentalPropertyObjectMother.BuildingA.Id).ConfigureAwait(false);
 
             // assert
             result.Should().NotBeNull();

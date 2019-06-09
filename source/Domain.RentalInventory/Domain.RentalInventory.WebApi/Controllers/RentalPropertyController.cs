@@ -6,12 +6,21 @@
 namespace Domain.RentalInventory.WebApi.Controllers
 {
     using System.Threading.Tasks;
+    using Domain.RentalInventory.Features.GetRentalPropertyById;
     using Domain.RentalInventory.Models;
+    using MediatR;
     using Microsoft.AspNetCore.Mvc;
 
     [Route("api/[controller]")]
     public class RentalPropertyController : Controller
     {
+        private readonly IMediator mediator;
+
+        public RentalPropertyController(IMediator mediator)
+        {
+            this.mediator = mediator;
+        }
+
         //// GET: api/<controller>
         ////[HttpGet]
         ////public IEnumerable<string> Get()
@@ -21,9 +30,14 @@ namespace Domain.RentalInventory.WebApi.Controllers
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public static Task<RentalProperty> Get()
+        public async Task<RentalProperty> Get(int id)
         {
-            return Task.FromResult(new RentalProperty());
+            var request = new GetRentalPropertyByIdRequest(id);
+
+            var response = await this.mediator.Send(request).ConfigureAwait(false);
+
+            // TODO: map to view model
+            return response.RentalProperty;
         }
 
         //// POST api/<controller>
