@@ -5,10 +5,13 @@
 
 namespace Domain.RentalInventory.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class RentalProperty
     {
-        public int Id { get; set; }
+        public int Id { get; }
 
-        public string Name { get; set; }
+        [Required]
+        public string Name { get; }
     }
 }
