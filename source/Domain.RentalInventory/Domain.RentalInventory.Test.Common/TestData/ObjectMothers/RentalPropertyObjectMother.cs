@@ -9,10 +9,6 @@ namespace Domain.RentalInventory.Test.Common.TestData.ObjectMothers
 
     public static class RentalPropertyObjectMother
     {
-        public static RentalProperty BuildingA => new RentalProperty
-        {
-            Id = 1,
-            Name = "Building A",
-        };
+        public static RentalProperty BuildingA => new RentalProperty(1, "Building A");
     }
 }

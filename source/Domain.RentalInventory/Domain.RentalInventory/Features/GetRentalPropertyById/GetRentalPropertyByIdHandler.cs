@@ -14,7 +14,7 @@ namespace Domain.RentalInventory.Features.GetRentalPropertyById
     {
         public Task<GetRentalPropertyByIdResponse> Handle(GetRentalPropertyByIdRequest request, CancellationToken cancellationToken)
         {
-            return Task.FromResult(new GetRentalPropertyByIdResponse(new RentalProperty()));
+            return Task.FromResult(new GetRentalPropertyByIdResponse(new RentalProperty(request.Id, "unknown")));
         }
     }
 }

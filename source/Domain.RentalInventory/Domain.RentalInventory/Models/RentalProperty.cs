@@ -9,6 +9,12 @@ namespace Domain.RentalInventory.Models
 
     public class RentalProperty
     {
+        public RentalProperty(int id, string name)
+        {
+            this.Id = id;
+            this.Name = name;
+        }
+
         public int Id { get; }
 
         [Required]
