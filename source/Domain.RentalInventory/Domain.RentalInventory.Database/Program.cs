@@ -6,17 +6,24 @@
 namespace Domain.RentalInventory.Database
 {
     using System;
-    using System.Linq;
     using System.Reflection;
     using DbUp;
+    using Microsoft.Extensions.Configuration;
 
     public static class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            var connectionString =
-                args.FirstOrDefault()
-                ?? "Server=.;Database=RentalInventory;Trusted_connection=true";
+            var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{environmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+
+            var configuration = builder.Build();
+
+            var connectionString = configuration.GetConnectionString("RentalInventory");
 
             EnsureDatabase.For.SqlDatabase(connectionString);
 
@@ -34,16 +41,9 @@ namespace Domain.RentalInventory.Database
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(result.Error);
                 Console.ResetColor();
-#if DEBUG
-                Console.ReadLine();
-#endif
             }
 
-            Console.ForegroundColor = ConsoleColor.Green;
-#pragma warning disable CA1303 // Do not pass literals as localized parameters
-            Console.WriteLine("Success!");
-#pragma warning restore CA1303 // Do not pass literals as localized parameters
-            Console.ResetColor();
+            Console.ReadLine();
         }
     }
 }
