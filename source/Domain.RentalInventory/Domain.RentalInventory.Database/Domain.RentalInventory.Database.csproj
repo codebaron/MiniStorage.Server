@@ -20,6 +20,7 @@
   
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="Scripts\201907180656 - BaseSchema.sql" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,10 @@
     <Content Include="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\201907180656 - BaseSchema.sql" />
   </ItemGroup>
 
   <ItemGroup>
