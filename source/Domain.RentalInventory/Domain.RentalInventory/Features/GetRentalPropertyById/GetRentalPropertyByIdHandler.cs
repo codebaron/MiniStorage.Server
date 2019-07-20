@@ -7,14 +7,22 @@ namespace Domain.RentalInventory.Features.GetRentalPropertyById
 {
     using System.Threading;
     using System.Threading.Tasks;
-    using Domain.RentalInventory.Models;
     using MediatR;
 
     public class GetRentalPropertyByIdHandler : IRequestHandler<GetRentalPropertyByIdRequest, GetRentalPropertyByIdResponse>
     {
-        public Task<GetRentalPropertyByIdResponse> Handle(GetRentalPropertyByIdRequest request, CancellationToken cancellationToken)
+        private readonly IGetRentalPropertyByIdRepository getRentalPropertyByIdRepository;
+
+        public GetRentalPropertyByIdHandler(IGetRentalPropertyByIdRepository getRentalPropertyByIdRepository)
         {
-            return Task.FromResult(new GetRentalPropertyByIdResponse(new RentalProperty(request.Id, "unknown")));
+            this.getRentalPropertyByIdRepository = getRentalPropertyByIdRepository;
+        }
+
+        public async Task<GetRentalPropertyByIdResponse> Handle(GetRentalPropertyByIdRequest request, CancellationToken cancellationToken)
+        {
+            var rentalProperty = await this.getRentalPropertyByIdRepository.GetRentalPropertyById(request.Id).ConfigureAwait(false);
+
+            return new GetRentalPropertyByIdResponse(rentalProperty);
         }
     }
 }

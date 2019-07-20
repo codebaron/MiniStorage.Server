@@ -34,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Domain.RentalInventory.Test.Common\Domain.RentalInventory.Test.Common.csproj" />
     <ProjectReference Include="..\Domain.RentalInventory\Domain.RentalInventory.csproj" />
   </ItemGroup>
 

@@ -6,24 +6,32 @@
 namespace Domain.RentalInventory.UnitTests.Features.GetRentalPropertyById
 {
     using System.Threading;
+    using System.Threading.Tasks;
     using Domain.RentalInventory.Features.GetRentalPropertyById;
+    using Domain.RentalInventory.Test.Common.TestData.ObjectMothers;
     using FluentAssertions;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using NSubstitute;
 
     [TestClass]
     public class GetRentalPropertyByIdHandlerTests
     {
         [TestMethod]
-        public void GetRentalPropertyByIdHandlerShouldHandleGetPropertyByIdRequest()
+        public async Task GetRentalPropertyByIdHandlerShouldHandleGetPropertyByIdRequest()
         {
             // arrange
-            var handler = new GetRentalPropertyByIdHandler();
+            var repository = Substitute.For<IGetRentalPropertyByIdRepository>();
+            repository.GetRentalPropertyById(Arg.Is(RentalPropertyObjectMother.BuildingA.Id)).Returns(RentalPropertyObjectMother.BuildingA);
+            var handler = new GetRentalPropertyByIdHandler(repository);
+            var request = new GetRentalPropertyByIdRequest(RentalPropertyObjectMother.BuildingA.Id);
 
             // act
-            var response = handler.Handle(new GetRentalPropertyByIdRequest(0), CancellationToken.None);
+            var response = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
 
             // assert
             response.Should().NotBeNull();
+            response.RentalProperty.Id.Should().Be(RentalPropertyObjectMother.BuildingA.Id);
+            response.RentalProperty.Name.Should().BeEquivalentTo(RentalPropertyObjectMother.BuildingA.Name);
         }
     }
 }
