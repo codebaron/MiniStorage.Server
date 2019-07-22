@@ -10,6 +10,6 @@ namespace Domain.RentalInventory.Features.GetRentalPropertyById
 
     public interface IGetRentalPropertyByIdRepository
     {
-        Task<RentalProperty> GetRentalPropertyById(int id);
+        Task<RentalProperty> GetRentalPropertyById(long id);
     }
 }

@@ -30,7 +30,7 @@ namespace Domain.RentalInventory.WebApi.Controllers
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public async Task<RentalPropertyViewModel> Get(int id)
+        public async Task<RentalPropertyViewModel> Get(long id)
         {
             var request = new GetRentalPropertyByIdRequest(id);
 

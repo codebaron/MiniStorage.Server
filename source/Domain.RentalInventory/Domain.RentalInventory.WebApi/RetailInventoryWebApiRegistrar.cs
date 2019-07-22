@@ -5,6 +5,7 @@
 
 namespace Domain.RentalInventory.WebApi
 {
+    using System;
     using Autofac;
     using Domain.RentalInventory.Features.GetRentalPropertyById;
     using MediatR;
@@ -27,6 +28,10 @@ namespace Domain.RentalInventory.WebApi
             builder
                 .RegisterAssemblyTypes(typeof(GetRentalPropertyByIdHandler).Assembly)
                 .AsClosedTypesOf(typeof(IRequestHandler<,>));
+
+            builder.RegisterAssemblyTypes(typeof(GetRentalPropertyByIdHandler).Assembly)
+                .Where(t => t.Name.EndsWith("Repository", StringComparison.InvariantCulture))
+                .AsImplementedInterfaces();
         }
     }
 }

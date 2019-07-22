@@ -15,7 +15,7 @@ namespace Domain.RentalInventory.WebApi.ViewModels
             this.Name = rentalProperty.Name;
         }
 
-        public int Id { get; }
+        public long Id { get; }
 
         public string Name { get; }
     }

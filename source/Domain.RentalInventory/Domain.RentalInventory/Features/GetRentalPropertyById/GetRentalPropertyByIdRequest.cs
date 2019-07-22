@@ -9,11 +9,11 @@ namespace Domain.RentalInventory.Features.GetRentalPropertyById
 
     public class GetRentalPropertyByIdRequest : IRequest<GetRentalPropertyByIdResponse>
     {
-        public GetRentalPropertyByIdRequest(int id)
+        public GetRentalPropertyByIdRequest(long id)
         {
             this.Id = id;
         }
 
-        public int Id { get; }
+        public long Id { get; }
     }
 }

@@ -26,6 +26,8 @@ namespace Domain.RentalInventory.WebApi.IntegrationTests.Controllers
 
             // assert
             result.Should().NotBeNull();
+            result.Id.Should().Be(RentalPropertyObjectMother.BuildingA.Id);
+            result.Name.Should().BeEquivalentTo(RentalPropertyObjectMother.BuildingA.Name);
         }
     }
 }
