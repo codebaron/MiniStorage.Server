@@ -1,14 +1,17 @@
 
 Task default -depends build
 
-Task build -depends CleanAll, RestoreNugetPackages, Compile
+Task build -depends RestoreNugetPackages, Compile
+
+Task rebuild -depends CleanAll, RestoreNugetPackages, Compile
 
 Task Initialize -description "Set script variables used for other build tasks"  {
 
 	$script:dotnet = (Get-Command dotnet.exe).Path
 	
 	$script:allProjects = Get-ChildItem -Path $PSScriptRoot -Include "*.csproj" -File -Recurse
-	$script:testProjects = Get-ChildItem -Path $PSScriptRoot -Include "*Tests.csproj" -File -Recurse
+	$script:unitTestProjects = Get-ChildItem -Path $PSScriptRoot -Include "*UnitTests.csproj" -File -Recurse
+	$script:integrationTestProjects = Get-ChildItem -Path $PSScriptRoot -Include "*IntegrationTests.csproj" -File -Recurse
 }
 
 Task CleanAll -depends CleanNugetPackages, CleanProjects
@@ -41,5 +44,21 @@ Task Compile -description "Compile all projects" {
     $script:allProjects | ForEach-Object {
 
         & $script:dotnet build $_
+    }
+} -depends Initialize
+
+Task UnitTest -description "Execute all unit tests" {
+
+    $script:unitTestProjects | ForEach-Object {
+
+        & $script:dotnet test $_ --no-build -v n
+    }
+} -depends Initialize
+
+Task IntegrationTest -description "Execute all integration tests" {
+
+    $script:integrationTestProjects | ForEach-Object {
+
+        & $script:dotnet test $_ --no-build -v n
     }
 } -depends Initialize
