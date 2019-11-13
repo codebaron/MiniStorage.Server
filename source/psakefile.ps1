@@ -1,9 +1,11 @@
 
 Task default -depends build
 
-Task build -depends RestoreNugetPackages, Compile
+Task build -depends RestoreNugetPackages, Compile, UnitTest
 
 Task rebuild -depends CleanAll, RestoreNugetPackages, Compile
+
+## BUILD
 
 Task Initialize -description "Set script variables used for other build tasks"  {
 
@@ -12,6 +14,7 @@ Task Initialize -description "Set script variables used for other build tasks"  
 	$script:allProjects = Get-ChildItem -Path $PSScriptRoot -Include "*.csproj" -File -Recurse
 	$script:unitTestProjects = Get-ChildItem -Path $PSScriptRoot -Include "*UnitTests.csproj" -File -Recurse
 	$script:integrationTestProjects = Get-ChildItem -Path $PSScriptRoot -Include "*IntegrationTests.csproj" -File -Recurse
+	$script:databaseProjects = Get-ChildItem -Path $PSScriptRoot -Include "*Database.csproj" -File -Recurse
 }
 
 Task CleanAll -depends CleanNugetPackages, CleanProjects
@@ -47,6 +50,8 @@ Task Compile -description "Compile all projects" {
     }
 } -depends Initialize
 
+## TEST
+
 Task UnitTest -description "Execute all unit tests" {
 
     $script:unitTestProjects | ForEach-Object {
@@ -61,4 +66,14 @@ Task IntegrationTest -description "Execute all integration tests" {
 
         & $script:dotnet test $_ --no-build -v n
     }
+} -depends Initialize, BuildUpdateDatabases
+
+Task BuildUpdateDatabases -description "Run all database scripts" {
+
+	$script:databaseProjects | ForEach-Object {
+	
+		& $script:dotnet run --project $_ -v m
+	}
 } -depends Initialize
+
+## TODO implement DropDatabases (using DropDatabase.For.SqlDatabase(connectionString);)
