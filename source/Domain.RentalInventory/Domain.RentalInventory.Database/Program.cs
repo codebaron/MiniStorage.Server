@@ -42,8 +42,6 @@ namespace Domain.RentalInventory.Database
                 Console.WriteLine(result.Error);
                 Console.ResetColor();
             }
-
-            Console.ReadLine();
         }
     }
 }
