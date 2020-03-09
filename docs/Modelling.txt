@@ -1,0 +1,64 @@
+
+I. RentalInventory Domain
+
+	A. RentalProperty
+	
+		1. Search all rental properties
+		
+		2. Rent a rental property
+		
+		3. Vacate a rental property
+		
+		4. Invoice a rental property
+		
+		5. Add notes to a rental property
+		
+		6. Add/update/revoke security access code
+		
+		7. Add/remove delinquent status
+		
+		8. Add/remove property from temporary hold
+		
+		9. Link/unlink Customer Loyalty account
+		
+		10. Add/remove promotion to rental property
+		
+		11. Apply payment
+	
+	B. Value objects
+	
+		1. Invoice & invoice line items (may originate in billing domain)
+		
+		2. Promotion (originate in promotion domain)
+		
+		3. Customer loyalty account (originate in customer loyalty domain)
+				
+II. LoyaltyMembership Domain
+
+	A. LoyaltyCustomer
+	
+		1. Search all loyalty customers
+		
+		2. Add/update loyalty accounts
+		
+		3. Add notes to a loyalty account
+		
+		4. Merge loyalty accounts
+		
+		5. Restore merged accounts
+		
+		6. Transfer loyalty point balance from one account to another
+		
+		7. Redeem loyalty points
+		
+		8. View customer rental/purchase history
+		
+		9. Expire point balance
+		
+		10. Upgrade membership teir level
+
+III. Billing Domain
+
+IV. Promotion Domain
+
+V. RetailInventory Domain
