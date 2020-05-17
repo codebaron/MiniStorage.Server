@@ -35,7 +35,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain.RentalInventory.Test.Common\Domain.RentalInventory.Test.Common.csproj" />
-    <ProjectReference Include="..\Domain.RentalInventory.WebApi\Domain.RentalInventory.WebApi.csproj" />
   </ItemGroup>
 
 </Project>
