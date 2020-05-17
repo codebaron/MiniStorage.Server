@@ -5,12 +5,18 @@
 
 namespace Domain.RentalInventory.WebApi.ViewModels
 {
+    using System;
     using Domain.RentalInventory.Models;
 
     public class RentalPropertyViewModel
     {
         public RentalPropertyViewModel(RentalProperty rentalProperty)
         {
+            if (rentalProperty == null)
+            {
+                throw new ArgumentNullException(nameof(rentalProperty));
+            }
+
             this.Id = rentalProperty.Id;
             this.Name = rentalProperty.Name;
         }
