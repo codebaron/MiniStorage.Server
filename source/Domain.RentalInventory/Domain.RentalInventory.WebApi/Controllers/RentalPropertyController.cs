@@ -7,7 +7,7 @@ namespace Domain.RentalInventory.WebApi.Controllers
 {
     using System.Threading.Tasks;
     using Domain.RentalInventory.Features.GetRentalPropertyById;
-    using Domain.RentalInventory.WebApi.ViewModels;
+    using Domain.RentalInventory.WebApi.Models.RentalProperty;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
 
