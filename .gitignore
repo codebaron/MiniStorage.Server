@@ -7,3 +7,4 @@ obj/
 /source/Domain.RentalInventory/Domain.RentalInventory.WebApi.IntegrationTests/Domain.RentalInventory.WebApi.IntegrationTests.xml
 /source/Domain.RentalInventory/Domain.RentalInventory.UnitTests/Domain.RentalInventory.UnitTests.xml
 /source/Domain.RentalInventory/Domain.RentalInventory.Database/Domain.RentalInventory.Database.xml
+/source/Domain.RentalInventory/Domain.RentalInventory.WebApi/Domain.RentalInventory.WebApi.xml

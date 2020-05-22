@@ -21,14 +21,7 @@ namespace Domain.RentalInventory.WebApi.Controllers
             this.mediator = mediator;
         }
 
-        //// GET: api/<controller>
-        ////[HttpGet]
-        ////public IEnumerable<string> Get()
-        ////{
-        ////    return new string[] { "value1", "value2" };
-        ////}
-
-        // GET api/<controller>/5
+        // GET api/rentalproperty/1
         [HttpGet("{id}")]
         public async Task<RentalPropertyViewModel> Get(long id)
         {
@@ -38,23 +31,5 @@ namespace Domain.RentalInventory.WebApi.Controllers
 
             return new RentalPropertyViewModel(response.RentalProperty);
         }
-
-        //// POST api/<controller>
-        ////[HttpPost]
-        ////public void Post([FromBody]string value)
-        ////{
-        ////}
-
-        //// PUT api/<controller>/5
-        ////[HttpPut("{id}")]
-        ////public void Put(int id, [FromBody]string value)
-        ////{
-        ////}
-
-        //// DELETE api/<controller>/5
-        ////[HttpDelete("{id}")]
-        ////public void Delete(int id)
-        ////{
-        ////}
     }
 }

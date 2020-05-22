@@ -10,18 +10,13 @@ namespace Domain.RentalInventory.WebApi
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
 
     public class Startup
     {
-        public Startup(IHostingEnvironment env)
+        public Startup(IConfiguration configuration)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables();
-
-            this.Configuration = builder.Build();
+            this.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -29,23 +24,30 @@ namespace Domain.RentalInventory.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public static void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-        }
-
-        public static void ConfigureContainer(ContainerBuilder builder)
-        {
-            builder.RegisterModule(new RetailInventoryWebApiRegistrar());
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public static void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+        }
+
+        public static void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new RetailInventoryWebApiRegistrar());
         }
     }
 }

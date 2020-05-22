@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -20,6 +20,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
     <CodeAnalysisRuleSet>..\..\stylecop.analyzers.ruleset</CodeAnalysisRuleSet>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -27,6 +28,7 @@
     <WarningsAsErrors />
     <CodeAnalysisRuleSet>..\..\stylecop.analyzers.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>C:\src\MicroserviceSandbox\source\Domain.RentalInventory\Domain.RentalInventory.UnitTests\Domain.RentalInventory.UnitTests.xml</DocumentationFile>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
