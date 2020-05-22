@@ -16,10 +16,6 @@ namespace Domain.RentalInventory.WebApi
     {
         public Startup(IConfiguration configuration)
         {
-            ////configuration.SetBasePath(System.IO.Directory.GetCurrentDirectory());  // errors here
-            ////configuration.AddJsonFile(path: "appsettings.json", optional: false, reloadOnChange: true); // errors here
-            ////configuration.Build();
-
             this.Configuration = configuration;
         }
 
