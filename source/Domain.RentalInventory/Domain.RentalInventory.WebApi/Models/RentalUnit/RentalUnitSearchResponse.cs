@@ -5,7 +5,10 @@
 
 namespace Domain.RentalInventory.WebApi.Models.RentalUnit
 {
+    using System.Collections.Generic;
+
     public class RentalUnitSearchResponse
     {
+        public ICollection<RentalUnitSearchResult> RentalUnitSearchResults { get; private set; }
     }
 }
