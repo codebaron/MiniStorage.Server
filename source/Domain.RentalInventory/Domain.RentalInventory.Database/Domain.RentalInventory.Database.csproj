@@ -22,6 +22,7 @@
     <None Remove="appsettings.json" />
     <None Remove="Scripts\201907180656 - BaseSchema.sql" />
     <None Remove="Scripts\201907191227 - BaseSystemData.sql" />
+    <None Remove="Scripts\202005221518 - BaseSeedData.sql" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +38,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Scripts\201907191227 - BaseSystemData.sql" />
     <EmbeddedResource Include="Scripts\201907180656 - BaseSchema.sql" />
+    <EmbeddedResource Include="Scripts\202005221518 - BaseSeedData.sql" />
   </ItemGroup>
 
   <ItemGroup>

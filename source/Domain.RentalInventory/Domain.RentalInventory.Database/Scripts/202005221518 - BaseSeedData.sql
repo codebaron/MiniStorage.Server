@@ -1,0 +1,116 @@
+﻿USE [RentalInventory]
+GO
+
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(1, 'A1', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(2, 'A2', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(3, 'A3', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(4, 'A4', 1, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(5, 'A5', 1, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(6, 'A6', 1, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(7, 'A7', 1, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(8, 'A8', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(9, 'A9', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(10, 'A10', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(11, 'A11', 1, 4, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(12, 'A12', 1, 1, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(13, 'A13', 1, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(14, 'A14', 1, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(15, 'A15', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(16, 'A16', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(17, 'A17', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(18, 'A18', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(19, 'A19', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(20, 'A20', 1, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(21, 'A21', 1, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(22, 'A22', 1, 1, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(23, 'A23', 1, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(24, 'A24', 1, 4, 2, 1);
+GO
+
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(25, 'B1', 2, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(26, 'B2', 2, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(27, 'B3', 2, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(28, 'B4', 2, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(29, 'B5', 2, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(30, 'B6', 2, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(31, 'B7', 2, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(32, 'B8', 2, 3, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(33, 'B9', 2, 3, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(34, 'B10', 2, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(35, 'B11', 2, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(36, 'B12', 2, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(37, 'B13', 2, 4, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(38, 'B14', 2, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(39, 'B15', 2, 4, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(40, 'B16', 2, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(41, 'B17', 2, 4, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(42, 'B18', 2, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(43, 'B19', 2, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(44, 'B20', 2, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(45, 'B21', 2, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(46, 'B22', 2, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(47, 'B23', 2, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(48, 'B24', 2, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(49, 'B25', 2, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(50, 'B26', 2, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(51, 'B27', 2, 1, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(52, 'B28', 2, 3, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(53, 'B29', 2, 1, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(54, 'B30', 2, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(55, 'B31', 2, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(56, 'B32', 2, 1, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(57, 'B33', 2, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(58, 'B34', 2, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(59, 'B35', 2, 1, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(60, 'B36', 2, 1, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(61, 'B37', 2, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(62, 'B38', 2, 2, 2, 1);
+GO
+
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(63, 'C1', 3, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(64, 'C2', 3, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(65, 'C3', 3, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(66, 'C4', 3, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(67, 'C5', 3, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(68, 'C6', 3, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(69, 'C7', 3, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(70, 'C8', 3, 3, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(71, 'C9', 3, 3, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(72, 'C10', 3, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(73, 'C11', 3, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(74, 'C12', 3, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(75, 'C13', 3, 4, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(76, 'C14', 3, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(77, 'C15', 3, 4, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(78, 'C16', 3, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(79, 'C17', 3, 4, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(80, 'C18', 3, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(81, 'C19', 3, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(82, 'C20', 3, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(83, 'C21', 3, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(84, 'C22', 3, 2, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(85, 'C23', 3, 4, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(86, 'C24', 3, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(87, 'C25', 3, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(88, 'C26', 3, 5, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(89, 'C27', 3, 1, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(90, 'C28', 3, 3, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(91, 'C29', 3, 1, 1, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(92, 'C30', 3, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(93, 'C31', 3, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(94, 'C32', 3, 1, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(95, 'C33', 3, 3, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(96, 'C34', 3, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(97, 'C35', 3, 1, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(98, 'C36', 3, 1, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(99, 'C37', 3, 2, 2, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(100, 'C38', 3, 2, 2, 1);
+GO
+
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(101, 'D1', 4, 6, 3, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(102, 'D2', 4, 6, 3, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(103, 'D3', 4, 6, 3, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(104, 'D4', 4, 6, 3, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(105, 'D5', 4, 6, 4, 1);
+INSERT INTO [dbo].[RentalUnit]([Id], [Name], [RentalPropertyId], [RentalUnitSizeId], [RentalUnitTypeId], [RentalUnitStatusId]) VALUES(106, 'D6', 4, 6, 4, 1);
+GO
