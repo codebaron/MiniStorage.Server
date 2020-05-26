@@ -25,8 +25,7 @@ namespace Domain.RentalInventory.WebApi
                 return t => c.Resolve(t);
             });
 
-            builder
-                .RegisterAssemblyTypes(typeof(GetRentalPropertyByIdHandler).Assembly)
+            builder.RegisterAssemblyTypes(typeof(GetRentalPropertyByIdHandler).Assembly)
                 .AsClosedTypesOf(typeof(IRequestHandler<,>));
 
             builder.RegisterAssemblyTypes(typeof(GetRentalPropertyByIdHandler).Assembly)

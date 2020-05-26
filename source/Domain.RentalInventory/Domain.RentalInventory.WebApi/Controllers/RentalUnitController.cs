@@ -7,6 +7,7 @@ namespace Domain.RentalInventory.WebApi.Controllers
 {
     using System;
     using System.Threading.Tasks;
+    using Domain.RentalInventory.Features.SearchRentalUnits;
     using Domain.RentalInventory.Models.Values.RentalUnit;
     using Domain.RentalInventory.WebApi.Models.RentalUnit;
     using MediatR;
@@ -24,9 +25,24 @@ namespace Domain.RentalInventory.WebApi.Controllers
 
         // POST api/rentalunit/search
         [HttpPost]
-        public Task<ActionResult<RentalUnitSearchResponse>> Search([FromBody] RentalUnitSearchRequest rentalUnitSearchRequest)
+        public async Task<ActionResult<RentalUnitSearchResponse>> Search([FromBody] RentalUnitSearchRequest rentalUnitSearchRequest)
         {
-            throw new NotImplementedException();
+            if (rentalUnitSearchRequest == null)
+            {
+                throw new ArgumentNullException(nameof(rentalUnitSearchRequest));
+            }
+
+            var searchRentalUnitsRequest = new SearchRentalUnitsRequest
+            {
+                RentalPropertyId = rentalUnitSearchRequest.RentalPropertyId,
+                RentalUnitSize = rentalUnitSearchRequest.RentalUnitSize,
+                RentalUnitStatus = rentalUnitSearchRequest.RentalUnitStatus,
+                RentalUnitType = rentalUnitSearchRequest.RentalUnitType,
+            };
+
+            var searchResults = await this.mediator.Send(searchRentalUnitsRequest).ConfigureAwait(false);
+
+            return this.Ok(searchResults);
         }
     }
 }
