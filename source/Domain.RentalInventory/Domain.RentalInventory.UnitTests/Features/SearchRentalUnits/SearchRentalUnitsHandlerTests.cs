@@ -23,7 +23,7 @@ namespace Domain.RentalInventory.UnitTests.Features.SearchRentalUnits
             // arrange
             var repository = Substitute.For<ISearchRentalUnitsRepository>();
             var handler = new SearchRentalUnitsHandler(repository);
-            var request = new SearchRentalUnitsRequest();
+            var request = new SearchRentalUnitsRequest(null, null, null, null);
 
             // act
             var response = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);

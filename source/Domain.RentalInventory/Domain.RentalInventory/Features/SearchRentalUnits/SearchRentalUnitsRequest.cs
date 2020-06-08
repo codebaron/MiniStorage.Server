@@ -10,12 +10,24 @@ namespace Domain.RentalInventory.Features.SearchRentalUnits
 
     public class SearchRentalUnitsRequest : IRequest<SearchRentalUnitsResponse>
     {
-        public int? RentalPropertyId { get; set; }
+        public SearchRentalUnitsRequest(
+            int? rentalPropertyId,
+            RentalUnitSize? rentalUnitSize,
+            RentalUnitStatus? rentalUnitStatus,
+            RentalUnitType? rentalUnitType)
+        {
+            this.RentalPropertyId = rentalPropertyId;
+            this.RentalUnitSize = rentalUnitSize;
+            this.RentalUnitStatus = rentalUnitStatus;
+            this.RentalUnitType = rentalUnitType;
+        }
 
-        public RentalUnitSize? RentalUnitSize { get; set; }
+        public int? RentalPropertyId { get; }
 
-        public RentalUnitStatus? RentalUnitStatus { get; set; }
+        public RentalUnitSize? RentalUnitSize { get; }
 
-        public RentalUnitType? RentalUnitType { get; set; }
+        public RentalUnitStatus? RentalUnitStatus { get; }
+
+        public RentalUnitType? RentalUnitType { get; }
     }
 }

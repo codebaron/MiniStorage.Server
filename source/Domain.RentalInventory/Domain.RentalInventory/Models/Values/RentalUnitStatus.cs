@@ -7,14 +7,14 @@ namespace Domain.RentalInventory.Models.Values
 {
     public enum RentalUnitStatus
     {
-        Vacant,
+        Vacant = 1,
 
-        ManagementHold,
+        ManagementHold = 2,
 
-        CustomerHold,
+        CustomerHold = 3,
 
-        Rented,
+        Rented = 4,
 
-        Delinquent,
+        Delinquent = 5,
     }
 }

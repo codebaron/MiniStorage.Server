@@ -6,9 +6,20 @@
 namespace Domain.RentalInventory.WebApi.Models.RentalUnit
 {
     using System.Collections.Generic;
+    using Domain.RentalInventory.Features.SearchRentalUnits;
 
     public class RentalUnitSearchResponse
     {
-        public ICollection<RentalUnitSearchResult> RentalUnitSearchResults { get; private set; }
+        internal RentalUnitSearchResponse(SearchRentalUnitsResponse searchRentalUnitsResponse)
+        {
+            this.RentalUnitSearchResults = new List<RentalUnitSearchResult>();
+
+            foreach (var item in searchRentalUnitsResponse.RentalUnits)
+            {
+                this.RentalUnitSearchResults.Add(new RentalUnitSearchResult(item));
+            }
+        }
+
+        public IList<RentalUnitSearchResult> RentalUnitSearchResults { get; private set; }
     }
 }

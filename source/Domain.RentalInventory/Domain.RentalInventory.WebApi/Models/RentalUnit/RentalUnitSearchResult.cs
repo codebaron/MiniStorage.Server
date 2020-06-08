@@ -5,10 +5,21 @@
 
 namespace Domain.RentalInventory.WebApi.Models.RentalUnit
 {
+    using Domain.RentalInventory.Models;
     using Domain.RentalInventory.Models.Values;
 
     public class RentalUnitSearchResult
     {
+        internal RentalUnitSearchResult(RentalUnit rentalUnit)
+        {
+            this.RentalUnitId = rentalUnit.Id;
+            this.RentalUnitName = rentalUnit.Name;
+        }
+
+        public long RentalUnitId { get; private set; }
+
+        public string RentalUnitName { get; private set; }
+
         public int RentalPropertyId { get; private set; }
 
         public RentalUnitSize RentalUnitSize { get; private set; }

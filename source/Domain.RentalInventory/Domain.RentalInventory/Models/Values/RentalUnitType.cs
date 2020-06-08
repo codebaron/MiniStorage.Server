@@ -7,12 +7,12 @@ namespace Domain.RentalInventory.Models.Values
 {
     public enum RentalUnitType
     {
-        Standard,
+        Standard = 1,
 
-        ClimateControl,
+        ClimateControl = 2,
 
-        Parking,
+        Parking = 3,
 
-        CoveredParking,
+        CoveredParking = 4,
     }
 }

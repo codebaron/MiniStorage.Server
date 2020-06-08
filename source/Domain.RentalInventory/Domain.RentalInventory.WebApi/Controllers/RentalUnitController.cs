@@ -32,17 +32,15 @@ namespace Domain.RentalInventory.WebApi.Controllers
                 throw new ArgumentNullException(nameof(rentalUnitSearchRequest));
             }
 
-            var searchRentalUnitsRequest = new SearchRentalUnitsRequest
-            {
-                RentalPropertyId = rentalUnitSearchRequest.RentalPropertyId,
-                RentalUnitSize = rentalUnitSearchRequest.RentalUnitSize,
-                RentalUnitStatus = rentalUnitSearchRequest.RentalUnitStatus,
-                RentalUnitType = rentalUnitSearchRequest.RentalUnitType,
-            };
+            var searchRentalUnitsRequest = new SearchRentalUnitsRequest(
+                rentalUnitSearchRequest.RentalPropertyId,
+                rentalUnitSearchRequest.RentalUnitSize,
+                rentalUnitSearchRequest.RentalUnitStatus,
+                rentalUnitSearchRequest.RentalUnitType);
 
             var searchResults = await this.mediator.Send(searchRentalUnitsRequest).ConfigureAwait(false);
 
-            return this.Ok(searchResults);
+            return this.Ok(new RentalUnitSearchResponse(searchResults));
         }
     }
 }

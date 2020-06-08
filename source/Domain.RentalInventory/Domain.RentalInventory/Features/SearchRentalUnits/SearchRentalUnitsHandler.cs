@@ -5,8 +5,11 @@
 
 namespace Domain.RentalInventory.Features.SearchRentalUnits
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
+    using Domain.RentalInventory.Models;
     using MediatR;
 
     public class SearchRentalUnitsHandler : IRequestHandler<SearchRentalUnitsRequest, SearchRentalUnitsResponse>
@@ -18,9 +21,17 @@ namespace Domain.RentalInventory.Features.SearchRentalUnits
             this.searchRentalUnitsRepository = searchRentalUnitsRepository;
         }
 
-        public Task<SearchRentalUnitsResponse> Handle(SearchRentalUnitsRequest request, CancellationToken cancellationToken)
+        public async Task<SearchRentalUnitsResponse> Handle(SearchRentalUnitsRequest request, CancellationToken cancellationToken)
         {
-            return Task.FromResult(new SearchRentalUnitsResponse());
+            var searchResults = await this.searchRentalUnitsRepository.SearchRentalUnits(
+                request.RentalPropertyId,
+                request.RentalUnitSize,
+                request.RentalUnitStatus,
+                request.RentalUnitType).ConfigureAwait(false);
+
+            var results = new SearchRentalUnitsResponse(searchResults.ToList());
+
+            return results;
         }
     }
 }

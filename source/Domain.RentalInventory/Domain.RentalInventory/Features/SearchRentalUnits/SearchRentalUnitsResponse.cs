@@ -5,7 +5,16 @@
 
 namespace Domain.RentalInventory.Features.SearchRentalUnits
 {
+    using System.Collections.Generic;
+    using Domain.RentalInventory.Models;
+
     public class SearchRentalUnitsResponse
     {
+        public SearchRentalUnitsResponse(IList<RentalUnit> rentalUnits)
+        {
+            this.RentalUnits = rentalUnits;
+        }
+
+        public IList<RentalUnit> RentalUnits { get; }
     }
 }

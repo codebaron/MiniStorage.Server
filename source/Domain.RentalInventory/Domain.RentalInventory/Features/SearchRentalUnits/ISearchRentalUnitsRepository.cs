@@ -8,9 +8,14 @@ namespace Domain.RentalInventory.Features.SearchRentalUnits
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using Domain.RentalInventory.Models;
+    using Domain.RentalInventory.Models.Values;
 
     public interface ISearchRentalUnitsRepository
     {
-        Task<IEnumerable<RentalUnit>> SearchRentalUnits(string name);
+        Task<IEnumerable<RentalUnit>> SearchRentalUnits(
+            int? rentalPropertyId,
+            RentalUnitSize? rentalUnitSize,
+            RentalUnitStatus? rentalUnitStatus,
+            RentalUnitType? rentalUnitType);
     }
 }

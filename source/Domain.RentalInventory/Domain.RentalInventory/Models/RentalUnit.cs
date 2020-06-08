@@ -6,18 +6,36 @@
 namespace Domain.RentalInventory.Models
 {
     using System.ComponentModel.DataAnnotations;
+    using Domain.RentalInventory.Features.Common.Data;
+    using Domain.RentalInventory.Models.Values;
 
     public class RentalUnit
     {
-        public RentalUnit(long id, string name)
+        internal RentalUnit()
         {
-            this.Id = id;
-            this.Name = name;
         }
 
-        public long Id { get; }
+        internal RentalUnit(RentalUnitData rentalUnitData)
+        {
+            this.Id = rentalUnitData.Id;
+            this.Name = rentalUnitData.Name;
+            this.RentalPropertyId = rentalUnitData.RentalPropertyId;
+            this.RentalUnitSize = (RentalUnitSize)rentalUnitData.RentalUnitSize;
+            this.RentalUnitStatus = (RentalUnitStatus)rentalUnitData.RentalUnitStatus;
+            this.RentalUnitType = (RentalUnitType)rentalUnitData.RentalUnitType;
+        }
+
+        public long Id { get; internal set; }
 
         [Required]
-        public string Name { get; }
+        public string Name { get; internal set; }
+
+        public long RentalPropertyId { get; internal set; }
+
+        public RentalUnitSize RentalUnitSize { get; internal set; }
+
+        public RentalUnitStatus RentalUnitStatus { get; internal set; }
+
+        public RentalUnitType RentalUnitType { get; internal set; }
     }
 }

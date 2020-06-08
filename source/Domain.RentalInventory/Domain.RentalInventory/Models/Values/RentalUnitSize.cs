@@ -7,22 +7,16 @@ namespace Domain.RentalInventory.Models.Values
 {
     public enum RentalUnitSize
     {
-        Unit5x5,
+        Unit5x10 = 1,
 
-        Unit5x7,
+        Unit10x10 = 2,
 
-        Unit5x10,
+        Unit10x15 = 3,
 
-        Unit8x10,
+        Unit10x20 = 4,
 
-        Unit10x10,
+        Unit10x30 = 5,
 
-        Unit12x10,
-
-        Unit20x10,
-
-        Unit30x10,
-
-        ParkingStandard,
+        ParkingStandard = 6,
     }
 }
